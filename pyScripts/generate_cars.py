@@ -31,8 +31,9 @@ def generate_cars(rows, with_features):
         print(single_insert_string) 
         file.write(single_insert_string)
         if with_features:
-            print(get_car_features())
-            file.write(get_car_features())
+            features = get_car_features()
+            print(features)
+            file.write(features)
     file.close()
 
 def get_car_features():
