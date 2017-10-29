@@ -1,5 +1,5 @@
 def generate_users(user_type, rows):
-
+    import random 
     def get_client_name():
         from pyfaker import Fake
         fake = Fake(lang_code='pl')
@@ -12,7 +12,6 @@ def generate_users(user_type, rows):
 
     def get_company_name():
         import csv
-        import random
         with open('companies.csv', 'rt', encoding='utf8') as f:
             reader = csv.reader(f)
             csvFileArray = []
@@ -21,7 +20,6 @@ def generate_users(user_type, rows):
             random_company = csvFileArray[random.randint(0, len(csvFileArray))] # randoms a company 
             return "'" + random_company[1] + "'" # returns company name
 
-    import random    
     company_or_individual = ['company', 'individual']
     if user_type == 'client':
         file = open('clients.sql', 'w')
