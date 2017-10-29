@@ -1,5 +1,6 @@
 def generate_users(user_type, rows):
-    import random 
+    import random
+     
     def get_client_name():
         from pyfaker import Fake
         fake = Fake(lang_code='pl')
