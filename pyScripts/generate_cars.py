@@ -12,10 +12,10 @@ def generate_cars(rows, with_features):
             # randoms a car (single list containing brand and model)
             return random_car
 
-    regions = ['dolnoslaskie', 'kujawsko-pomorskie', 'lubelskie',
-        'lubuskie', 'lodzkie', 'malopolskie', 'mazowieckie', 'opolskie',
-        'podkarpackie', 'podlaskie', 'pomorskie', 'slaskie', 'swietokrzyskie',
-        'warminsko-mazurskie', 'wielkopolskie', 'zachodniopomorskie']
+    regions = ['dolnośląskie', 'kujawsko-pomorskie', 'lubelskie',
+        'lubuskie', 'łódzkie', 'małopolskie', 'mazowieckie', 'opolskie',
+        'podkarpackie', 'podlaskie', 'pomorskie', 'śląskie', 'świętokrzyskie',
+        'warmińsko-mazurskie', 'wielkopolskie', 'zachodniopomorskie']
 
     file = open('cars.sql', 'w')
     for _ in range(rows):
@@ -26,7 +26,7 @@ def generate_cars(rows, with_features):
             "'" + random.choice(regions) + "'" + ', ' + \
             str(random.randint(1979, 2016)) + ', ' + \
             str(random.randrange(0, 400000, 500)) + ', ' + \
-            str(random.randrange(5000, 500000, 1000)) + ');\n'
+            str(random.randrange(0, 200000, 250)) + ');\n'
         # max year set to 2016 to prevent situation when car is sold before it's actually produced
         print(single_insert_string) 
         file.write(single_insert_string)
