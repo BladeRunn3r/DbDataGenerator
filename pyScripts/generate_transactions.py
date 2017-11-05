@@ -57,4 +57,4 @@ def generate_transactions(rows, cars_number, clients_number, sellers_number):
         file.write(single_insert_string)
     file.close()
 
-generate_transactions(50, 50, 25, 25)
+generate_transactions(50, 50, 50, 50)
