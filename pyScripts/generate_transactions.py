@@ -45,17 +45,13 @@ def generate_transactions(rows, cars_number, clients_number, sellers_number):
         date_string += "'yyyy/mm/dd'" + ')'
         return date_string
 
-    payment_types = ['card', 'cash']
-
     file = open('transactions.sql', 'w')
     for _ in range(rows):
-        single_insert_string = 'INSERT INTO car_transaction' + \
-            '(car_id, client_id, seller_id, payment_type, transaction_date) VALUES('
+        single_insert_string = 'INSERT INTO car_transaction(car_id, client_id, seller_id, transaction_date) VALUES('
         single_insert_string += \
             str(get_car_id()) + ', ' + \
             str(random.randint(1, clients_number)) + ', ' + \
             str(random.randint(1, sellers_number)) + ', ' + \
-            "'" + random.choice(payment_types) + "'" + ', ' + \
             get_date() + ');\n'
         print(single_insert_string)
         file.write(single_insert_string)
