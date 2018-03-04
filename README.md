@@ -1,7 +1,7 @@
 # DbDataGenerator
 Used data/tools:
 
-  --> [PyFaker](https://github.com/hayd/pyfaker) for generating users and their location (matching randomed nationality) - needed to run code
+  --> [PyFaker](https://github.com/hayd/pyfaker) for generating users and their location - needed to run code
   
   --> cars csv file exported from Oracle using data from [this](https://github.com/n8barr/automotive-model-year-data) database
   
